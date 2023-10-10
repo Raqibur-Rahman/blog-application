@@ -39,6 +39,9 @@ yarn dev
 
 Open your web browser and access the application at http://localhost:3000.
 
+exit
+
+
 ##Usage
 Create a new blog post by clicking the "Add Blog" button on the homepage.
 View all blog posts by clicking "View All Blogs."
