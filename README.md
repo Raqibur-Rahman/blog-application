@@ -12,17 +12,18 @@ Before you begin, ensure you have met the following requirements:
 - MongoDB installed and running locally
 
 
-##Usage
+## Usage
 Create a new blog post by clicking the "Add Blog" button on the homepage.
 View all blog posts by clicking "View All Blogs."
 Click on a blog post to view its details.
 Enjoy blogging!
 
 
-##@Technologies Used
+## Technologies Used 
 Next.js
 MongoDB
 Prisma
+
 ## Getting Started
 
 To get a local copy up and running, follow these simple steps:
