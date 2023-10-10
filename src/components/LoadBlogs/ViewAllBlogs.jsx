@@ -57,41 +57,46 @@ export default function AllBlogs() {
         }
         setIsLoading(false);
     };
-    const loadedPostsToDisplay = loadedPosts.slice(0, 10);
+
     return (
         <main>
-            <div className="mb-4 flex justify-center items-center">
+            <div className="mb-4 mt-4 flex justify-center items-center">
+
                 <button
-                    className={`mr-4 ${selectedCategory === 'All' ? 'bg-blue-500' : 'bg-gray-300'
-                        } text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition duration-300`}
+                    className={`mr-4 ${
+                        selectedCategory === 'All' ? 'bg-blue-500' : 'bg-gray-300'
+                    } text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition duration-300`}
                     onClick={() => filterPostsByCategory('All')}
                 >
                     All
                 </button>
                 <button
-                    className={`mr-4 ${selectedCategory === 'Technology' ? 'bg-blue-500' : 'bg-gray-300'
-                        } text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition duration-300`}
+                    className={`mr-4 ${
+                        selectedCategory === 'Technology' ? 'bg-blue-500' : 'bg-gray-300'
+                    } text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition duration-300`}
                     onClick={() => filterPostsByCategory('Technology')}
                 >
                     Technology
                 </button>
                 <button
-                    className={`mr-4 ${selectedCategory === 'Leisure Time' ? 'bg-blue-500' : 'bg-gray-300'
-                        } text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition duration-300`}
+                    className={`mr-4 ${
+                        selectedCategory === 'Leisure Time' ? 'bg-blue-500' : 'bg-gray-300'
+                    } text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition duration-300`}
                     onClick={() => filterPostsByCategory('Leisure Time')}
                 >
                     Leisure Time
                 </button>
                 <button
-                    className={`mr-4 ${selectedCategory === 'Literature' ? 'bg-blue-500' : 'bg-gray-300'
-                        } text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition duration-300`}
+                    className={`mr-4 ${
+                        selectedCategory === 'Literature' ? 'bg-blue-500' : 'bg-gray-300'
+                    } text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition duration-300`}
                     onClick={() => filterPostsByCategory('Literature')}
                 >
                     Literature
                 </button>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {loadedPostsToDisplay.map((post) => {
+                {loadedPosts.map((post) => {
                     const postDate = new Date(post.date);
                     const formattedDate = postDate.toLocaleDateString('en-US', {
                         year: 'numeric',
@@ -125,13 +130,7 @@ export default function AllBlogs() {
                 })}
             </div>
 
-            {showViewAllButton && (
-                <div className="text-center mt-4 mb-32">
-                    <Link href={'/blog/all-blogs'}>
-                        <button className="bg-blue-500 text-white px-4 py-2   rounded-lg hover:bg-blue-600 transition duration-300"> View All Blogs</button>
-                    </Link>
-                </div>
-            )}
+        
 
             {isLoading && (
                 <div className="text-center mt-4">
