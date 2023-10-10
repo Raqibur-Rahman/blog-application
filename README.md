@@ -11,6 +11,18 @@ Before you begin, ensure you have met the following requirements:
 - npm or Yarn package manager
 - MongoDB installed and running locally
 
+
+##Usage
+Create a new blog post by clicking the "Add Blog" button on the homepage.
+View all blog posts by clicking "View All Blogs."
+Click on a blog post to view its details.
+Enjoy blogging!
+
+
+##@Technologies Used
+Next.js
+MongoDB
+Prisma
 ## Getting Started
 
 To get a local copy up and running, follow these simple steps:
@@ -41,16 +53,3 @@ Open your web browser and access the application at http://localhost:3000.
 
 exit
 
-
-##Usage
-Create a new blog post by clicking the "Add Blog" button on the homepage.
-View all blog posts by clicking "View All Blogs."
-Click on a blog post to view its details.
-Edit or delete a blog post from its detail page.
-Enjoy blogging!
-
-
-#@Technologies Used
-Next.js
-MongoDB
-Prisma
